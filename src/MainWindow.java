@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.security.Permission;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,7 +26,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
-import com.tim.wuppacker.Starter;
+import com.tim.nuspacker.Starter;
+
 
 public class MainWindow extends JPanel implements ActionListener
 {
@@ -40,6 +42,8 @@ public class MainWindow extends JPanel implements ActionListener
 	static JTextField keyWithText;
 	static JButton btnGo;
 	private JTextArea statusLabel;
+
+
 
 	public void initialise()
 	{
@@ -186,8 +190,9 @@ public class MainWindow extends JPanel implements ActionListener
         {
 		case "go":
 			String [] args = {inputText.getText(), outputText.getText(), titleidText.getText(), keyText.getText(), keyWithText.getText()};
+
 			Starter.main(args);
-			break;
+
         }
 
 	}
